@@ -1,0 +1,23 @@
+{
+  "name": "lego-design-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "pnpm run -r build",
+    "bump": "changeset version",
+    "lint": "pnpm run -r lint",
+    "prepare": "husky install",
+    "release": "pnpm lint && pnpm test && pnpm build && pnpm publish -r",
+    "test": "pnpm run -r test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@changesets/cli": "^2.23.0",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1",
+    "pretty-quick": "^3.1.3"
+  }
+}
