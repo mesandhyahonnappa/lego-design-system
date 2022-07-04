@@ -1,0 +1,217 @@
+@mixin visually-hidden() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  outline: 0;
+  opacity: 0;
+  appearance: none;
+  clip: rect(0 0 0 0);
+}
+
+@mixin text-inherit() {
+  color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-style: inherit;
+  letter-spacing: inherit;
+  white-space: inherit;
+  text-align: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+  text-indent: inherit;
+  text-overflow: inherit;
+}
+
+@mixin overlay() {
+  @include position(0, 0, 0, 0);
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+}
+
+// Add position for all directions
+// @param {string} $top
+// @param {string} $right
+// @param {string} $bottom
+// @param {string} $left
+// ----------------------------------------------------------
+@mixin position($top: null, $right: null, $bottom: null, $left: null) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// Add property for all directions
+// @param {string} $top
+// @param {string} $right
+// @param {string} $bottom
+// @param {string} $left
+@mixin property($prop, $top, $right: $top, $bottom: $top, $left: $top) {
+  #{$prop}-top: $top;
+  #{$prop}-right: $right;
+  #{$prop}-bottom: $bottom;
+  #{$prop}-left: $left;
+}
+
+// Add property horizontal
+// @param {string} $left
+// @param {string} $right
+@mixin prop-horizontal($prop, $left, $right: $left) {
+  #{$prop}-left: $left;
+  #{$prop}-right: $right;
+}
+
+// Add property vertical
+// @param {string} $left
+// @param {string} $right
+@mixin prop-vertical($prop, $top, $bottom: $top) {
+  #{$prop}-top: $top;
+  #{$prop}-bottom: $bottom;
+}
+
+// Add padding for all directions
+// @param {string} $top
+// @param {string} $right
+// @param {string} $bottom
+// @param {string} $left
+@mixin padding($top, $right: $top, $bottom: $top, $left: $top) {
+  @if $top == $right and $right == $bottom and $bottom == $left {
+    padding: $top;
+  } @else {
+    @include property('padding', $top, $right, $bottom, $left);
+  }
+}
+
+// Add padding horizontal
+// @param {string} $left
+// @param {string} $right
+@mixin padding-horizontal($left, $right: $left) {
+  @include prop-horizontal('padding', $left, $right);
+}
+
+// Add padding vertical
+// @param {string} $top
+// @param {string} $bottom
+@mixin padding-vertical($top, $bottom: $top) {
+  @include prop-vertical('padding', $top, $bottom);
+}
+
+// Add margin for all directions
+// @param {string} $top
+// @param {string} $right
+// @param {string} $bottom
+// @param {string} $left
+@mixin margin($top, $right: $top, $bottom: $top, $left: $top) {
+  @if $top == $right and $right == $bottom and $bottom == $left {
+    margin: $top;
+  } @else {
+    @include property('margin', $top, $right, $bottom, $left);
+  }
+}
+
+// Add margin horizontal
+// @param {string} $left
+// @param {string} $right
+@mixin margin-horizontal($left, $right: $left) {
+  @include prop-horizontal('margin', $left, $right);
+}
+
+// Add margin vertical
+// @param {string} $top
+// @param {string} $bottom
+@mixin margin-vertical($top, $bottom: $top) {
+  @include prop-vertical('margin', $top, $bottom);
+}
+
+// Add border for all directions
+// @param {string} $top
+// @param {string} $right
+// @param {string} $bottom
+// @param {string} $left
+// ----------------------------------------------------------
+@mixin border($top, $right: $top, $bottom: $top, $left: $top) {
+  @if $top == $right and $right == $bottom and $bottom == $left and $left == $top {
+    border: $top;
+  } @else {
+    @include property('border', $top, $end, $bottom, $start);
+  }
+}
+
+// Add border radius for all directions
+// @param {string} $top-start
+// @param {string} $top-end
+// @param {string} $bottom-end
+// @param {string} $bottom-start
+// ----------------------------------------------------------
+@mixin border-radius($top-left, $top-right: $top-left, $bottom-right: $top-left, $bottom-left: $top-left) {
+  @if $top-left == $top-right and $top-right == $bottom-right and $bottom-right == $bottom-left {
+    border-radius: $top-left;
+  } @else {
+    border-radius: $top-left $top-right $bottom-right $bottom-left;
+  }
+}
+
+// Make the element circle
+// @param {string} $size
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+
+  @include border-radius($size);
+}
+
+// TODO: Add further Typography class once you receive a finalized typography
+
+@mixin typography-largescreens-body-small-semibold() {
+  font-weight: $jll-ds-typography-largescreens-body-small-semibold-font-weight;
+  font-size: $jll-ds-typography-largescreens-body-small-semibold-font-size;
+
+  /* font */
+  font-family: $jll-ds-typography-largescreens-body-small-semibold-font-family;
+  font-style: $jll-ds-typography-largescreens-body-small-semibold-font-style;
+  font-stretch: $jll-ds-typography-largescreens-body-small-semibold-font-stretch;
+
+  /* text-spacing */
+  line-height: $jll-ds-typography-largescreens-body-small-semibold-line-height;
+  letter-spacing: $jll-ds-typography-largescreens-body-small-semibold-letter-spacing;
+}
+
+@mixin typography-largescreens-body-semibold() {
+  font-weight: $jll-ds-typography-largescreens-body-semibold-font-weight;
+  font-size: $jll-ds-typography-largescreens-body-semibold-font-size;
+
+  /* font */
+  font-family: $jll-ds-typography-largescreens-body-semibold-font-family;
+  font-style: $jll-ds-typography-largescreens-body-semibold-font-style;
+  font-stretch: $jll-ds-typography-largescreens-body-semibold-font-stretch;
+
+  /* text-spacing */
+  line-height: $jll-ds-typography-largescreens-body-semibold-line-height;
+  letter-spacing: $jll-ds-typography-largescreens-body-semibold-letter-spacing;
+}
+
+@mixin typography-largescreens-caption-semibold() {
+  font-weight: $jll-ds-typography-largescreens-caption-semibold-font-weight;
+  font-size: $jll-ds-typography-largescreens-caption-semibold-font-size;
+
+  /* font */
+  font-family: $jll-ds-typography-largescreens-caption-semibold-font-family;
+  font-style: $jll-ds-typography-largescreens-caption-semibold-font-style;
+  font-stretch: $jll-ds-typography-largescreens-caption-semibold-font-stretch;
+
+  /* text-spacing */
+  line-height: $jll-ds-typography-largescreens-caption-semibold-line-height;
+  letter-spacing: $jll-ds-typography-largescreens-caption-semibold-letter-spacing;
+}

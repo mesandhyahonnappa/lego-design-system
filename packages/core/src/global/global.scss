@@ -1,0 +1,43 @@
+@import './mixins/mixins';
+
+@mixin typography-largescreens-body-small-semibold() {
+  font-weight: --jll-ds-typography-largescreens-body-small-semibold-font-weight;
+  font-size: --jll-ds-typography-largescreens-body-small-semibold-font-size;
+
+  /* font */
+  font-family: --jll-ds-typography-largescreens-body-small-semibold-font-family;
+  font-style: --jll-ds-typography-largescreens-body-small-semibold-font-style;
+  font-stretch: --jll-ds-typography-largescreens-body-small-semibold-font-stretch;
+
+  /* text-spacing */
+  line-height: --jll-ds-typography-largescreens-body-small-semibold-line-height;
+  letter-spacing: --jll-ds-typography-largescreens-body-small-semibold-letter-spacing;
+}
+
+@mixin typography-largescreens-body-semibold() {
+  font-weight: --jll-ds-typography-largescreens-body-semibold-font-weight;
+  font-size: --jll-ds-typography-largescreens-body-semibold-font-size;
+
+  /* font */
+  font-family: --jll-ds-typography-largescreens-body-semibold-font-family;
+  font-style: --jll-ds-typography-largescreens-body-semibold-font-style;
+  font-stretch: --jll-ds-typography-largescreens-body-semibold-font-stretch;
+
+  /* text-spacing */
+  line-height: --jll-ds-typography-largescreens-body-semibold-line-height;
+  letter-spacing: --jll-ds-typography-largescreens-body-semibold-letter-spacing;
+}
+
+@mixin typography-largescreens-caption-semibold() {
+  font-weight: --jll-ds-typography-largescreens-caption-semibold-font-weight;
+  font-size: --jll-ds-typography-largescreens-caption-semibold-font-size;
+
+  /* font */
+  font-family: --jll-ds-typography-largescreens-caption-semibold-font-family;
+  font-style: --jll-ds-typography-largescreens-caption-semibold-font-style;
+  font-stretch: --jll-ds-typography-largescreens-caption-semibold-font-stretch;
+
+  /* text-spacing */
+  line-height: --jll-ds-typography-largescreens-caption-semibold-line-height;
+  letter-spacing: --jll-ds-typography-largescreens-caption-semibold-letter-spacing;
+}

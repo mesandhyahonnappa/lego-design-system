@@ -1,0 +1,80 @@
+:host {
+  --overflow: hidden;
+  --opacity: 1;
+  --border-width: initial;
+  --border-color: initial;
+  --border-style: initial;
+  --border-radius: 4px;
+  --padding-top: var(--jll-ds-spacing-2, $jll-ds-spacing-2);
+  --padding-bottom: var(--jll-ds-spacing-2);
+  --padding-left: var(--jll-ds-spacing-3);
+  --padding-right: var(--jll-ds-spacing-3);
+  --box-shadow: none;
+  --height: 36px;
+  --icon-size: var(--jll-ds-spacing-4);
+  --icon-gutter: var(--jll-ds-spacing-2);
+}
+
+:host(.small) {
+  --border-radius: 4px;
+  --padding-top: var(--jll-ds-spacing-1);
+  --padding-bottom: var(--jll-ds-spacing-1);
+  --padding-left: var(--jll-ds-spacing-2);
+  --padding-right: var(--jll-ds-spacing-2);
+  --height: 24px;
+  --icon-size: var(--jll-ds-spacing-3);
+  --icon-gutter: var(--jll-ds-spacing-1);
+}
+
+:host(.large) {
+  --border-radius: 6px;
+  --padding-top: var(--jll-ds-spacing-3);
+  --padding-bottom: var(--jll-ds-spacing-3);
+  --padding-left: var(--jll-ds-spacing-5);
+  --padding-right: var(--jll-ds-spacing-5);
+  --height: 48px;
+  --icon-size: var(--jll-ds-spacing-5);
+  --icon-gutter: var(--jll-ds-spacing-3);
+}
+
+:host(.primary) {
+  --background: var(--jll-ds-color-surface-base-reversed);
+  --background-activated: var(--jll-ds-color-interaction-default-focus);
+  --background-focused: var(--jll-ds-color-interaction-default-focus);
+  --background-hover: var(--jll-ds-color-interaction-default-hover);
+  --background-disabled: var(--jll-ds-color-surface-base-reversed);
+  --background-overlay-disabled: var(--jll-ds-color-interaction-default-disabled);
+  --color: var(--jll-ds-color-text-base-reversed);
+  --color-activated: var(--jll-ds-color-text-base-reversed);
+  --color-focused: var(--jll-ds-color-text-base-reversed);
+  --color-hover: var(--jll-ds-color-text-base-reversed);
+  --color-disabled: rgb(58 62 67 / 50%);
+}
+
+:host(.secondary) {
+  --background: var(--jll-ds-color-surface-base-secondary);
+  --background-activated: var(--jll-ds-color-interaction-default-focus);
+  --background-focused: var(--jll-ds-color-interaction-default-focus);
+  --background-hover: var(--jll-ds-color-interaction-reversed-hover);
+  --background-disabled: var(--jll-ds-color-surface-base-reversed);
+  --background-overlay-disabled: var(--jll-ds-color-interaction-default-disabled);
+  --color: var(--jll-ds-color-text-base-default);
+  --color-activated: var(--jll-ds-color-text-base-default);
+  --color-focused: var(--jll-ds-color-text-base-default);
+  --color-hover: var(--jll-ds-color-text-base-default);
+  --color-disabled: rgb(58 62 67 / 50%);
+}
+
+:host(.ghost) {
+  --background: var(--jll-ds-color-interaction-default-idle);
+  --background-activated: var(--jll-ds-color-interaction-reversed-focus);
+  --background-focused: var(--jll-ds-color-interaction-reversed-focus);
+  --background-hover: var(--jll-ds-color-interaction-reversed-hover);
+  --background-disabled: var(--jll-ds-color-interaction-default-idle);
+  --background-overlay-disabled: var(--jll-ds-color-interaction-default-disabled);
+  --color: var(--jll-ds-color-text-base-default);
+  --color-activated: var(--jll-ds-color-text-base-default);
+  --color-focused: var(--jll-ds-color-text-base-default);
+  --color-hover: var(--jll-ds-color-text-base-default);
+  --color-disabled: rgb(58 62 67 / 50%);
+}

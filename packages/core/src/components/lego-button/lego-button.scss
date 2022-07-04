@@ -1,0 +1,206 @@
+@import './lego-button-variants';
+
+// Button
+// --------------------------------------------------------------------
+
+:host {
+  /**
+   * @prop --overflow: Overflow of button text
+   * @prop --opacity: Opacity of the button
+   *
+   * @prop --border-width: Border width of the button
+   * @prop --border-style: Border style
+   * @prop --border-radius: Border radius of the button
+   *
+   * @prop --padding-top: Padding top of the button
+   * @prop --padding-bottom: Padding bottom of the button
+   * @prop --padding-left: Padding left of the button
+   * @prop --padding-right: Padding right of the button
+   *
+   * @prop --box-shadow: Box shadow of the button
+   * @prop --height: Height of the button
+   *
+   * @prop --padding-top: Top padding of the button
+   * @prop --padding-right: Right padding of the button
+   * @prop --padding-bottom: Bottom padding of the button
+   * @prop --padding-left: Left padding of the button
+   *
+   * @prop --icon-size: Icons size
+   * @prop --icon-gutter: Icon gutter
+   *
+   * @prop --background: Background of the button
+   * @prop --background-activated: Background of the button when pressed.
+   * @prop --background-focused: Background of the button when focused with the tab key
+   * @prop --background-hover: Background of the button on hover
+   *
+   * @prop --color: Text color of the button
+   * @prop --color-activated: Text color of the button when pressed
+   * @prop --color-focused: Text color of the button when focused with the tab key
+   * @prop --color-hover: Text color of the button when hover
+   * @prop --color-disabled: Text color of the disabled button
+   *
+   * @prop --transition: Transition of the button
+   */
+
+  display: inline-block;
+  width: auto;
+  height: var(--height);
+  white-space: nowrap;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  vertical-align: top;
+  vertical-align: -webkit-baseline-middle;
+  user-select: none;
+  font-kerning: none;
+
+  @include typography-largescreens-body-small-semibold;
+
+  & .icon svg {
+    width: var(--icon-size);
+    height: var(--icon-size);
+  }
+}
+
+:host(.button-disabled) {
+  cursor: default;
+  pointer-events: none;
+}
+
+// Full width button
+:host(.full-width) {
+  display: block;
+}
+
+:host(.small) {
+  height: var(--height);
+
+  @include typography-largescreens-caption-semibold;
+
+  & .icon svg {
+    width: var(--icon-size);
+    height: var(--icon-size);
+  }
+}
+
+:host(.large) {
+  height: var(--height);
+
+  @include typography-largescreens-body-semibold;
+
+  & .icon svg {
+    width: var(--icon-size);
+    height: var(--icon-size);
+  }
+}
+
+:host(:not(.icon-only)) {
+  .icon-left {
+    margin-right: var(--icon-gutter);
+  }
+
+  .icon-right {
+    margin-left: var(--icon-gutter);
+  }
+}
+
+:host(.small:not(.icon-only)) {
+  .icon-left {
+    margin-right: var(--icon-gutter);
+  }
+
+  .icon-right {
+    margin-left: var(--icon-gutter);
+  }
+}
+
+:host(.large:not(.icon-only)) {
+  .icon-left {
+    margin-right: var(--icon-gutter);
+  }
+
+  .icon-right {
+    margin-left: var(--icon-gutter);
+  }
+}
+
+.button-native {
+  position: relative;
+  z-index: 0;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: var(--overflow);
+
+  @include text-inherit;
+
+  color: var(--color);
+  background: var(--background);
+  border: 0;
+  border-color: var(--border-color);
+  border-style: var(--border-style);
+  border-width: var(--border-width);
+  outline: none;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  opacity: var(--opacity);
+  appearance: none;
+  contain: layout style;
+
+  @include border-radius(var(--border-radius));
+  @include padding(var(--padding-top), var(--padding-right), var(--padding-bottom), var(--padding-left));
+
+  &:hover::before {
+    @include overlay;
+
+    background: var(--background-hover);
+  }
+
+  &:focus::before {
+    @include overlay;
+
+    background: var(--background-focused);
+  }
+
+  &:active::before {
+    @include overlay;
+
+    background: var(--background-activated);
+  }
+
+  &:disabled {
+    color: var(--color-disabled);
+    background: var(--background-disabled);
+  }
+
+  &:disabled::before {
+    @include overlay;
+
+    background: var(--background-overlay-disabled);
+  }
+}
+
+:host(.full-width) .button-native {
+  display: block;
+  clear: both;
+  width: 100%;
+  contain: content;
+}
+
+.button-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
