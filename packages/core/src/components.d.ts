@@ -7,7 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { ButtonType, ButtonVariant } from "./components/lego-button/interface";
 import { Size } from "./utils/element-interface";
-import { InputChangeEventDetail } from "./components/lego-textfield/lego-textfield";
+import { InputChangeEventDetail } from "./components/lego-textfield/lego-textfield-interface";
 export namespace Components {
     interface LegoButton {
         /**
@@ -73,11 +73,11 @@ export namespace Components {
          */
         "placeholder": string;
         /**
-          * Sets blur on the native `input` in `jll-textarea`. Use this method instead of the global `input.blur()`.
+          * Sets blur on the native `input` in `lego-textfield`. Use this method instead of the global `input.blur()`.
          */
         "setBlur": () => Promise<void>;
         /**
-          * Sets focus on the native `input` in `jll-input`. Use this method instead of the global `input.focus()`.
+          * Sets focus on the native `input` in `lego-input`. Use this method instead of the global `input.focus()`.
          */
         "setFocus": () => Promise<void>;
         /**
@@ -201,19 +201,19 @@ declare namespace LocalJSX {
         /**
           * Emitted when the input loses focus.
          */
-        "onJllBlur"?: (event: LegoTextfieldCustomEvent<FocusEvent>) => void;
+        "onLegoBlur"?: (event: LegoTextfieldCustomEvent<FocusEvent>) => void;
         /**
           * Emitted when the value has changed.
          */
-        "onJllChange"?: (event: LegoTextfieldCustomEvent<InputChangeEventDetail>) => void;
+        "onLegoChange"?: (event: LegoTextfieldCustomEvent<InputChangeEventDetail>) => void;
         /**
           * Emitted when the input has focus.
          */
-        "onJllFocus"?: (event: LegoTextfieldCustomEvent<FocusEvent>) => void;
+        "onLegoFocus"?: (event: LegoTextfieldCustomEvent<FocusEvent>) => void;
         /**
           * Emitted when a keyboard input occurred.
          */
-        "onJllInput"?: (event: LegoTextfieldCustomEvent<InputEvent>) => void;
+        "onLegoInput"?: (event: LegoTextfieldCustomEvent<InputEvent>) => void;
         /**
           * Placeholder text of input
          */

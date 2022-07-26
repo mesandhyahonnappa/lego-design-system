@@ -1,0 +1,164 @@
+{
+  "version": 1.1,
+  "tags": [
+    {
+      "name": "lego-button",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "disabled",
+          "description": "If 'true' user can not interact with the button"
+        },
+        {
+          "name": "download",
+          "description": "This attribute instructs browsers to download a URL instead of navigating to\nit, so the user will be prompted to save it as a local file. If the attribute\nhas a value, it is used as the pre-filled file name in the Save prompt\n(the user can still change the file name if they want)."
+        },
+        {
+          "name": "full-width",
+          "description": "Determines width of the button. If true, the button will take up full width of the container."
+        },
+        {
+          "name": "href",
+          "description": "Contains a URL or a URL fragment that the hyperlink points to.\nIf this property is set, an anchor tag will be rendered."
+        },
+        {
+          "name": "icon-left",
+          "description": "Icon to display to the left side of the button content;"
+        },
+        {
+          "name": "icon-right",
+          "description": "Icon to display to the right side of the button content"
+        },
+        {
+          "name": "rel",
+          "description": "Specifies the relationship of the target object to the link object.\nThe value is a space-separated list of [link types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types)."
+        },
+        {
+          "name": "size",
+          "description": "Determines size of the button",
+          "values": [
+            {
+              "name": "large"
+            },
+            {
+              "name": "medium"
+            },
+            {
+              "name": "small"
+            }
+          ]
+        },
+        {
+          "name": "target",
+          "description": "Specifies where to display the linked URL.\nOnly applies when an `href` is provided.\nSpecial keywords: `\"_blank\"`, `\"_self\"`, `\"_parent\"`, `\"_top\"`."
+        },
+        {
+          "name": "type",
+          "description": "The type of the button.",
+          "values": [
+            {
+              "name": "button"
+            },
+            {
+              "name": "reset"
+            },
+            {
+              "name": "submit"
+            }
+          ]
+        },
+        {
+          "name": "variant",
+          "description": "This attribute indicates the variant of button. Varies by background color and border.",
+          "values": [
+            {
+              "name": "ghost"
+            },
+            {
+              "name": "primary"
+            },
+            {
+              "name": "secondary"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "lego-greet",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": []
+    },
+    {
+      "name": "lego-link",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": []
+    },
+    {
+      "name": "lego-textfield",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "disabled",
+          "description": "If 'true' the input is disabled"
+        },
+        {
+          "name": "placeholder",
+          "description": "Placeholder text of input"
+        },
+        {
+          "name": "size",
+          "description": "input size",
+          "values": [
+            {
+              "name": "large"
+            },
+            {
+              "name": "medium"
+            },
+            {
+              "name": "small"
+            }
+          ]
+        },
+        {
+          "name": "type",
+          "description": "A hint to the browser for which keyboard to display.\nPossible values: ``\"text\"`, `\"tel\"`,\n`\"email\"`, `\"numeric\"`, `\"decimal\"`, and `\"password\"`.",
+          "values": [
+            {
+              "name": "email"
+            },
+            {
+              "name": "number"
+            },
+            {
+              "name": "password"
+            },
+            {
+              "name": "tel"
+            },
+            {
+              "name": "text"
+            }
+          ]
+        },
+        {
+          "name": "value",
+          "description": "The value of the input."
+        }
+      ]
+    }
+  ]
+}

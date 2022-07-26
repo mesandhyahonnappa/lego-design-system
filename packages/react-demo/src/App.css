@@ -1,0 +1,33 @@
+:root {
+  --jll-theme: #e30713;
+}
+.App {
+  padding: 20px;
+  text-align: center;
+}
+.container {
+  display: flex;
+  align-items: center;
+  margin: 6rem 2rem;
+}
+.col {
+  width: 30%;
+}
+.row {
+  margin: 1rem 0;
+}
+.align-right {
+  text-align: right;
+}
+
+.row-action {
+  display: flex;
+  align-items: center;
+  text-align: right;
+  justify-content: right;
+  gap: 1rem;
+}
+
+lego-button {
+  --background: var(--jll-theme);
+}

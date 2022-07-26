@@ -1,9 +1,8 @@
 import { Component, Host, h, Prop, Method, Watch, Event, EventEmitter } from '@stencil/core';
 import { createClasses } from '../../utils/create-classes';
 import { Size } from '../../utils/element-interface';
-export interface InputChangeEventDetail {
-  value?: string | null;
-}
+import { InputChangeEventDetail } from './lego-textfield-interface';
+
 @Component({
   tag: 'lego-textfield',
   styleUrl: 'lego-textfield.scss',
@@ -38,23 +37,23 @@ export class LegoTextfield {
   /**
    * Emitted when the input loses focus.
    */
-  @Event() jllBlur!: EventEmitter<FocusEvent>;
+  @Event() legoBlur!: EventEmitter<FocusEvent>;
   /**
    * Emitted when the input has focus.
    */
-  @Event() jllFocus!: EventEmitter<FocusEvent>;
+  @Event() legoFocus!: EventEmitter<FocusEvent>;
   /**
    * Emitted when a keyboard input occurred.
    */
-  @Event() jllInput: EventEmitter<InputEvent>;
+  @Event() legoInput: EventEmitter<InputEvent>;
 
   /**
    * Emitted when the value has changed.
    */
-  @Event() jllChange!: EventEmitter<InputChangeEventDetail>;
+  @Event() legoChange!: EventEmitter<InputChangeEventDetail>;
 
   /**
-   * Sets focus on the native `input` in `jll-input`. Use this method instead of the global
+   * Sets focus on the native `input` in `lego-input`. Use this method instead of the global
    * `input.focus()`.
    */
   @Method()
@@ -65,7 +64,7 @@ export class LegoTextfield {
   }
 
   /**
-   * Sets blur on the native `input` in `jll-textarea`. Use this method instead of the global
+   * Sets blur on the native `input` in `lego-textfield`. Use this method instead of the global
    * `input.blur()`.
    * @internal
    */
@@ -90,17 +89,17 @@ export class LegoTextfield {
       nativeInput.value = value;
     }
 
-    this.jllChange.emit({ value: this.value === '' ? this.value : this.value.toString() });
+    this.legoChange.emit({ value: this.value === '' ? this.value : this.value.toString() });
   }
 
   private onBlur = (ev: FocusEvent) => {
     ev.preventDefault();
-    this.jllBlur.emit(ev);
+    this.legoBlur.emit(ev);
   };
 
   private onFocus = (ev: FocusEvent) => {
     ev.preventDefault();
-    this.jllFocus.emit(ev);
+    this.legoFocus.emit(ev);
   };
 
   private onInput = (ev: Event) => {
@@ -108,7 +107,7 @@ export class LegoTextfield {
     if (input !== null) {
       this.value = input.value || '';
     }
-    this.jllInput.emit(ev as InputEvent);
+    this.legoInput.emit(ev as InputEvent);
   };
 
   private onChange = (ev: Event) => {
@@ -117,13 +116,13 @@ export class LegoTextfield {
       this.value = value || '';
     }
 
-    this.jllChange.emit({ value });
+    this.legoChange.emit({ value });
   };
 
   render() {
     return (
       <Host
-        class={createClasses('ui-input ', {
+        class={createClasses('lego-input ', {
           small: this.size === 'small',
           medium: this.size === 'medium',
           large: this.size === 'large',
@@ -135,6 +134,7 @@ export class LegoTextfield {
           ref={input => (this.nativeInput = input)}
           disabled={this.disabled}
           placeholder={this.placeholder}
+          type={this.type}
           value={this.value}
           onInput={this.onInput}
           onBlur={this.onBlur}

@@ -175,43 +175,43 @@
 // TODO: Add further Typography class once you receive a finalized typography
 
 @mixin typography-largescreens-body-small-semibold() {
-  font-weight: $jll-ds-typography-largescreens-body-small-semibold-font-weight;
-  font-size: $jll-ds-typography-largescreens-body-small-semibold-font-size;
+  font-weight: var(--typography-largescreens-body-small-semibold-font-weight);
+  font-size: var(--typography-largescreens-body-small-semibold-font-size);
 
   /* font */
-  font-family: $jll-ds-typography-largescreens-body-small-semibold-font-family;
-  font-style: $jll-ds-typography-largescreens-body-small-semibold-font-style;
-  font-stretch: $jll-ds-typography-largescreens-body-small-semibold-font-stretch;
+  font-family: var(--typography-largescreens-body-small-semibold-font-family);
+  font-style: var(--typography-largescreens-body-small-semibold-font-style);
+  font-stretch: var(--typography-largescreens-body-small-semibold-font-stretch);
 
   /* text-spacing */
-  line-height: $jll-ds-typography-largescreens-body-small-semibold-line-height;
-  letter-spacing: $jll-ds-typography-largescreens-body-small-semibold-letter-spacing;
+  line-height: var(--typography-largescreens-body-small-semibold-line-height);
+  letter-spacing: var(--typography-largescreens-body-small-semibold-letter-spacing);
 }
 
 @mixin typography-largescreens-body-semibold() {
-  font-weight: $jll-ds-typography-largescreens-body-semibold-font-weight;
-  font-size: $jll-ds-typography-largescreens-body-semibold-font-size;
+  font-weight: var(--typography-largescreens-body-semibold-font-weight);
+  font-size: var(--typography-largescreens-body-semibold-font-size);
 
   /* font */
-  font-family: $jll-ds-typography-largescreens-body-semibold-font-family;
-  font-style: $jll-ds-typography-largescreens-body-semibold-font-style;
-  font-stretch: $jll-ds-typography-largescreens-body-semibold-font-stretch;
+  font-family: var(--typography-largescreens-body-semibold-font-family);
+  font-style: var(--typography-largescreens-body-semibold-font-style);
+  font-stretch: var(--typography-largescreens-body-semibold-font-stretch);
 
   /* text-spacing */
-  line-height: $jll-ds-typography-largescreens-body-semibold-line-height;
-  letter-spacing: $jll-ds-typography-largescreens-body-semibold-letter-spacing;
+  line-height: var(--typography-largescreens-body-semibold-line-height);
+  letter-spacing: var(--typography-largescreens-body-semibold-letter-spacing);
 }
 
 @mixin typography-largescreens-caption-semibold() {
-  font-weight: $jll-ds-typography-largescreens-caption-semibold-font-weight;
-  font-size: $jll-ds-typography-largescreens-caption-semibold-font-size;
+  font-weight: var(--typography-largescreens-caption-semibold-font-weight);
+  font-size: var(--typography-largescreens-caption-semibold-font-size);
 
   /* font */
-  font-family: $jll-ds-typography-largescreens-caption-semibold-font-family;
-  font-style: $jll-ds-typography-largescreens-caption-semibold-font-style;
-  font-stretch: $jll-ds-typography-largescreens-caption-semibold-font-stretch;
+  font-family: var(--typography-largescreens-caption-semibold-font-family);
+  font-style: var(--typography-largescreens-caption-semibold-font-style);
+  font-stretch: var(--typography-largescreens-caption-semibold-font-stretch);
 
   /* text-spacing */
-  line-height: $jll-ds-typography-largescreens-caption-semibold-line-height;
-  letter-spacing: $jll-ds-typography-largescreens-caption-semibold-letter-spacing;
+  line-height: var(--typography-largescreens-caption-semibold-line-height);
+  letter-spacing: var(--typography-largescreens-caption-semibold-letter-spacing);
 }

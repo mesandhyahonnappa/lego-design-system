@@ -18,19 +18,19 @@
 
 ## Events
 
-| Event       | Description                             | Type                                  |
-| ----------- | --------------------------------------- | ------------------------------------- |
-| `jllBlur`   | Emitted when the input loses focus.     | `CustomEvent<FocusEvent>`             |
-| `jllChange` | Emitted when the value has changed.     | `CustomEvent<InputChangeEventDetail>` |
-| `jllFocus`  | Emitted when the input has focus.       | `CustomEvent<FocusEvent>`             |
-| `jllInput`  | Emitted when a keyboard input occurred. | `CustomEvent<InputEvent>`             |
+| Event        | Description                             | Type                                  |
+| ------------ | --------------------------------------- | ------------------------------------- |
+| `legoBlur`   | Emitted when the input loses focus.     | `CustomEvent<FocusEvent>`             |
+| `legoChange` | Emitted when the value has changed.     | `CustomEvent<InputChangeEventDetail>` |
+| `legoFocus`  | Emitted when the input has focus.       | `CustomEvent<FocusEvent>`             |
+| `legoInput`  | Emitted when a keyboard input occurred. | `CustomEvent<InputEvent>`             |
 
 
 ## Methods
 
 ### `setFocus() => Promise<void>`
 
-Sets focus on the native `input` in `jll-input`. Use this method instead of the global
+Sets focus on the native `input` in `lego-input`. Use this method instead of the global
 `input.focus()`.
 
 #### Returns

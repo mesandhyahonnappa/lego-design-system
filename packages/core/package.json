@@ -2,11 +2,9 @@
   "name": "@sandhyahonnappa/lego-design-system",
   "version": "0.0.0",
   "description": "Lego Design System",
-  "main": "dist/index.cjs.js",
   "module": "dist/index.js",
-  "es2015": "dist/esm/index.mjs",
-  "es2017": "dist/esm/index.mjs",
-  "types": "dist/types/index.d.ts",
+  "main": "dist/index.cjs.js",
+  "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
   "unpkg": "dist/legodesignsystem/legodesignsystem.esm.js",
@@ -16,10 +14,12 @@
   },
   "files": [
     "dist/",
+    "components/",
+    "css/",
     "loader/"
   ],
   "scripts": {
-    "build": "stencil build --docs",
+    "build": "stencil build",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",

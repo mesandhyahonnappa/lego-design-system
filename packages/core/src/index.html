@@ -4,11 +4,43 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
     <title>Stencil Component Starter</title>
-
+    <link rel="stylesheet" href="/build/legodesignsystem.css" />
     <script type="module" src="/build/legodesignsystem.esm.js"></script>
     <script nomodule src="/build/legodesignsystem.js"></script>
+    <style>
+      .container {
+        display: flex;
+        align-items: center;
+        margin: 6rem 2rem;
+      }
+      .col {
+        width: 30%;
+      }
+      .row {
+        margin: 1rem 0;
+      }
+      .align-right {
+        text-align: right;
+      }
+    </style>
   </head>
   <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+    <div class="container">
+      <div class="col">
+        <div class="row">
+          <h3>Login</h3>
+        </div>
+        <div class="row">
+          <lego-textfield placeholder="User Name"></lego-textfield>
+        </div>
+        <div class="row">
+          <lego-textfield placeholder="Password" type="password"></lego-textfield>
+        </div>
+        <div class="row align-right">
+          <lego-button>Log In</lego-button>
+          <lego-button>Sign Up</lego-button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

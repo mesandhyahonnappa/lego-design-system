@@ -1,5 +1,7 @@
+import path from 'path';
 import resolve from '@rollup/plugin-node-resolve';
 import sourcemaps from 'rollup-plugin-sourcemaps';
+import copy from 'rollup-plugin-copy';
 
 export default {
   input: {
@@ -28,5 +30,13 @@ export default {
   plugins: [
     resolve(),
     sourcemaps(),
+    copy({
+      targets: [
+        {
+          src: path.resolve(__dirname, 'node_modules/@sandhyahonnappa/lego-design-system/dist/css/variables.css'),
+          dest: path.resolve(__dirname, 'dist/css'),
+        },
+      ],
+    }),
   ],
 };
