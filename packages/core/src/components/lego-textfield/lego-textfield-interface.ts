@@ -1,3 +1,3 @@
-export interface InputChangeEventDetail {
-  value?: string | null;
+export interface InputChangeEventDetail<T = any> {
+  value?: T;
 }

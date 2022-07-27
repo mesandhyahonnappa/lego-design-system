@@ -18,12 +18,12 @@
 
 ## Events
 
-| Event        | Description                             | Type                                  |
-| ------------ | --------------------------------------- | ------------------------------------- |
-| `legoBlur`   | Emitted when the input loses focus.     | `CustomEvent<FocusEvent>`             |
-| `legoChange` | Emitted when the value has changed.     | `CustomEvent<InputChangeEventDetail>` |
-| `legoFocus`  | Emitted when the input has focus.       | `CustomEvent<FocusEvent>`             |
-| `legoInput`  | Emitted when a keyboard input occurred. | `CustomEvent<InputEvent>`             |
+| Event        | Description                             | Type                                       |
+| ------------ | --------------------------------------- | ------------------------------------------ |
+| `legoBlur`   | Emitted when the input loses focus.     | `CustomEvent<FocusEvent>`                  |
+| `legoChange` | Emitted when the value has changed.     | `CustomEvent<InputChangeEventDetail<any>>` |
+| `legoFocus`  | Emitted when the input has focus.       | `CustomEvent<FocusEvent>`                  |
+| `legoInput`  | Emitted when a keyboard input occurred. | `CustomEvent<InputEvent>`                  |
 
 
 ## Methods
